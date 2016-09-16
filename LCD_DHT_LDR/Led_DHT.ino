@@ -22,13 +22,13 @@ void setup()
 }
 
 void loop() {
-  delay(3500);
+  delay(3000);
   float h = dht.readHumidity();
   float t = dht.readTemperature();
   
   //LDR
   ValorLDR = analogRead(LDR);
-  if(ValorLDR < 100)
+  if(ValorLDR < 80)
   {
     analogWrite(Led, pwm);
     pwm++;
